@@ -1,5 +1,6 @@
 # Neon-buttons
 A Vencord CSS snippet that gives some buttons a neon glow 
+(this is my first time making a theme pls be nice)
 
 
 
