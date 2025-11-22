@@ -1,0 +1,64 @@
+/**
+ * @name Neon Buttons
+ * @author Gummythebear(AKA aperson)
+ * @source https://github.com/apersonH1/Neon-buttons/tree/main
+ * @description A Vencord CSS snippet that gives some buttons a neon glow
+ * @authorId 1024063416366792714
+ */
+:root {
+    --button-glow-color: #0dff00;
+    --button-glow-size: 14px;
+    --button-hover-scale: 1.07;
+}
+
+button,
+[role="button"],
+div[role="button"],
+span[role="button"],
+.clickable,
+.button-38aScr,
+.button-1EGGcP,
+.button-2fCJ0o,
+.lookFilled-1GseHa,
+.lookFilled-3G0QKz,
+.lookOutlined-3sRXeN,
+.lookOutlined-2sC0F1,
+.item-1OdjEX,
+.tabBarItem-30Te4-,
+.tabBarItem-3GxI2g {
+    transition: all 0.2s ease-in-out !important;
+}
+
+button:hover,
+[role="button"]:hover,
+div[role="button"]:hover,
+span[role="button"]:hover,
+.clickable:hover,
+.button-38aScr:hover,
+.button-1EGGcP:hover,
+.button-2fCJ0o:hover,
+.lookFilled-1GseHa:hover,
+.lookFilled-3G0QKz:hover,
+.lookOutlined-3sRXeN:hover,
+.lookOutlined-2sC0F1:hover,
+.item-1OdjEX:hover,
+.tabBarItem-30Te4-:hover,
+.tabBarItem-3GxI2g:hover {
+    transform: scale(var(--button-hover-scale));
+    animation: neonPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+    0% {
+        box-shadow: 0 0 var(--button-glow-size) var(--button-glow-color),
+                    0 0 calc(var(--button-glow-size) * 1.5) var(--button-glow-color);
+    }
+    50% {
+        box-shadow: 0 0 calc(var(--button-glow-size) * 1.5) var(--button-glow-color),
+                    0 0 calc(var(--button-glow-size) * 2.2) var(--button-glow-color);
+    }
+    100% {
+        box-shadow: 0 0 var(--button-glow-size) var(--button-glow-color),
+                    0 0 calc(var(--button-glow-size) * 1.5) var(--button-glow-color);
+    }
+}
